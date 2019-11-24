@@ -5,6 +5,8 @@ const hbs=require('hbs');
 const path=require('path');
 const express=require('express');
 
+const port= process.env.PORT ||3000
+
 const app=express();
 
 //setup path location for public and  
@@ -87,6 +89,6 @@ app.get('*',(req,res)=>{
 
 
 
-app.listen(3000,()=>{
-    console.log('application is up and running on port 3000');
+app.listen(port,()=>{
+    console.log('application is up and running on port '+port);
 })
